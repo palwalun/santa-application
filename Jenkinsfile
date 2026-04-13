@@ -7,6 +7,11 @@ agent any
 	 branch: 'master'
 	}
    }
+  stage('Build'){
+   steps{
+    sh 'mvn clean package -DskipTests'
+   }
+  }
  }
 
 }
