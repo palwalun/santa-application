@@ -14,7 +14,7 @@ agent any
   }
  stage('Build Image'){
   steps{
-   docker build -t santa-application .
+   sh 'docker build -t santa-application .'
   }
  }
  }
