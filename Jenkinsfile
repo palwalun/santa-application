@@ -12,6 +12,11 @@ agent any
     sh 'mvn clean package -DskipTests'
    }
   }
+ stage('Build Image'){
+  steps{
+   docker build -t santa-application .
+  }
+ }
  }
 
 }
